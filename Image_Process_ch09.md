@@ -1,2 +1,10 @@
 ## Chapter 9. Geometric Camera Models
 
+### 9.1 2D Projective Transformation
+찍혀진 방향, 거리에 따라 기울어진, 찌그러진 모양을 변환 하기 
+
+![](https://qph.ec.quoracdn.net/main-qimg-7f88e97748213f7a3fb8959afda744ac?convert_to_webp=true)
+
+
+
+
