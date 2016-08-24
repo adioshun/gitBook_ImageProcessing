@@ -19,9 +19,11 @@
 
 #### 2D Projective Distortion (시점 변경?)
 ![](http://cfile24.uf.tistory.com/image/2604EB41577D2C44289430)
-
+좌에서 찍은 사진을 우에서 찍은 형태로 변경 
 #### 3D Projective Distortion
 
 #### Radial Distortion (휘지 않은것으로?)
+볼록렌즈로 사진 찍은것 같은것을 평면 모양으로 변경 
+![](http://hugin.sourceforge.net/docs/manual/Barrel-distortion.jpg)
 
 
