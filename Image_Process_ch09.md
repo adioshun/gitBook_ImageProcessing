@@ -18,8 +18,10 @@
 ### 9.2 Conversion of Transformations
 
 #### 2D Projective Distortion (시점 변경?)
+![](http://cfile24.uf.tistory.com/image/2604EB41577D2C44289430)
 
 #### 3D Projective Distortion
 
-#### Radial Distortion 
+#### Radial Distortion (휘지 않은것으로?)
+
 
