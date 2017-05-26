@@ -24,4 +24,10 @@
 * [Image\_Process\_ch21](Image_Process_ch21.md)
 * [Image\_Process\_ch22](Image_Process_ch22.md)
 * [Image\_Process\_ch23](Image_Process_ch23.md)
+* [Chapter 1. Setting Up OpenCV](chapter-1-setting-up-opencv.md)
+* [Chapter 3. Processing Images with OpenCV 3](chapter-3-processing-images-with-opencv-3.md)
+* [Chapter 4. Depth Estimation and Segmentation](chapter-4-depth-estimation-and-segmentation.md)
+* [Chapter 5. Detecting and Recognizing Faces](chapter-5-detecting-and-recognizing-faces.md)
+* [Chapter 6. Retrieving Images and Searching Using Image Descriptors](chapter-6-retrieving-images-and-searching-using-image-descriptors.md)
+* [Chapter 7. Detecting and Recognizing Objects](chapter-7-detecting-and-recognizing-objects.md)
 
