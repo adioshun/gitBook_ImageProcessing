@@ -1,11 +1,14 @@
 # Summary
 
 * [Introduction](README.md)
+
+---
+
 * [Image\_Process\_ch01](Image_Process_ch01.md)
 * [Image\_Process\_ch02](Image_Process_ch02.md)
 * [Image\_Process\_ch03](Image_Process_ch03.md)
 * [Image\_Process\_ch04](Image_Process_ch04.md)
-* [Image\_Process\_ch05](Image_Process_ch05.md)
+* [Image\_Process\_ch05\_Image Morphology](Image_Process_ch05.md)
 * [Image\_Process\_ch06](Image_Process_ch06.md)
 * [Image\_Process\_ch07](Image_Process_ch07.md)
 * [Image\_Process\_ch08](Image_Process_ch08.md)
@@ -24,6 +27,9 @@
 * [Image\_Process\_ch21](Image_Process_ch21.md)
 * [Image\_Process\_ch22](Image_Process_ch22.md)
 * [Image\_Process\_ch23](Image_Process_ch23.md)
+
+---
+
 * [Chapter 1. Setting Up OpenCV](chapter-1-setting-up-opencv.md)
 * [Chapter 3. Processing Images with OpenCV 3](chapter-3-processing-images-with-opencv-3.md)
 * [Chapter 4. Depth Estimation and Segmentation](chapter-4-depth-estimation-and-segmentation.md)
