@@ -1,24 +1,24 @@
-## Chapter 4. Edge Detection 
+## Chapter 4. Edge Detection
 
 ### 4.1 Canny Edge Dectetor [1]
-절차 
+절차
 1. Smoothed imges(=Gaussin filter) : 노이즈 제거
 2. First-difference approximation : 미분 연산을 통해 intensity가 급격한 곳 찾기
-3. Compute gradient magnitude and orientation 
+3. Compute gradient magnitude and orientation
 	* 4개의 섹터로 나눔 : Horizontal, vertical, diagonal, anti-diagonal
-4. Nonmaximal suppression 
-5. Thresholding and connected edge preserving 
+4. Nonmaximal suppression
+5. Thresholding and connected edge preserving
 
-### 4.2 SUSAN Edge Dectetor 
+### 4.2 SUSAN Edge Dectetor
 * Smallest Univalue Segment Assimilating Nucleus
 
 ![](http://users.fmrib.ox.ac.uk/~steve/susan/susan/img9.gif)
 
-* Necleus : 중심 값 
+* Necleus : 중심 값
 
 ---
 
-## Coutour Detection 
+## Coutour Detection
 
 Contour란 같은 값을 가진 곳을 연결한 선 (eg. 등고선)
 
@@ -31,20 +31,20 @@ Contour란 같은 값을 가진 곳을 연결한 선 (eg. 등고선)
 |-|
 
 ```python
-#Gray 스케일로 변환시킨 imgray를 thresholding 하여 그 값을 thresh로 합니다. 
-ret, thr = cv2.threshold(imgray, 127, 255, 0) 
+#Gray 스케일로 변환시킨 imgray를 thresholding 하여 그 값을 thresh로 합니다.
+ret, thr = cv2.threshold(imgray, 127, 255, 0)
 
 
 contours, hierarchy = cv2.findContours(threshold_image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     """
     Goal : 윤곽선들 찾기
     첫 번째 인자로 Contour를 찾을 행렬화된 이미지를 받는다. (중요 : 바이너리 이미지)
-    두 번째 인자로 Contour 찾는 알고리즘을 준다. 
+    두 번째 인자로 Contour 찾는 알고리즘을 준다.
     . cv2.RETR_EXTERNAL: 이미지의 가장 바깥쪽의 contour만 추출
     . cv2.RETR_LIST: contour 간 계층구조 상관관계를 고려하지 않고 contour를 추출
     . cv2.RETR_CCOMP: 이미지에서 모든 contour를 추출한 후, 2단계 contour 계층 구조로 구성함. 1단계 계층에서는 외곽 경계 부분을, 2단계 계층에서는 구멍(hole)의 경계 부분을 나타내는 contour로 구성됨
     . cv2.RETR_TREE: 이미지에서 모든 contour를 추출하고 Contour들간의 상관관계를 추출함
-    세 번째 인자로 찾은 컨투어를 저장할 때 방식을 준다. 
+    세 번째 인자로 찾은 컨투어를 저장할 때 방식을 준다.
     .cv2.CHAIN_APPROX_NONE: contour를 구성하는 모든 점을 저장함.
     . cv2.CHAIN_APPROX_SIMPLE: contour의 수평, 수직, 대각선 방향의 점은 모두 버리고 끝 점만 남겨둠. 예를 들어 똑바로 세워진 직사각형의 경우, 4개 모서리점만 남기고 다 버림
     . cv2.CHAIN_APPROX_TC89__1: Teh-Chin 연결 근사 알고리즘(Teh-Chin chain approximation algorithm)을 적용함
@@ -67,23 +67,41 @@ cv2.drawContours(original_image, [contours[ci]], 0, (255, 0, 255), 3)
 
 ```
 
-### Contour활용 
+### Contour활용 #1
 
 도형의 특징 정보 도출 : 이미지 모멘트 이용
     - 이미지 모멘트 : 객체의 무게중심, 객체의 면적 등과 같은 특성을 계산할 때 유용(`cv2.moments`)
-    
+
 
     모멘트 종류는 3가지이며 아래와 같이 총 24개의 값을 가집니다.
     1. 공간 모멘트(Spatial Moments) : m00, m10, m01, m20, m11, m02, m30, m21, m12, m03
     2. 중심 모멘트(Central Moments) : mu20, mu11, mu02, mu30, mu21, mu12, mu03
     3. 평준화된 중심 모멘트(Central Normalized Moments) : nu20, nu11, nu02, nu30, nu21, nu03
-    
 
 
+활용 예
+
+```python
+# 첫번째 contour에 대한 이미지 모멘트를 구함
+contour = cv2.contours[0]
+mmt = cv2.moments(contour)
+
+# 무게 중심 (x,y)
+cx = int(mmt['m10']/mmt['m00'])
+cy = int(mmt['m01']/mmt['m00'])
+
+# Contour Area(=면적)
+Contour_Area =  mmt['m00'] # 또는 cv2.contourArea(contour)로도 구할수 있음
+
+#Contour Perimeter(=호의 길이)
+cv2.arcLength(contour, TRUE) # 2nd 인자에서 해당 Contour이 폐곡선(TRUE)인지 열린곡선(FALSE)인지 지정
+```
+
+### Contour활용 #2 [[출처]](http://sams.epaiai.com/220517391218)
 
 ---
 
-## 특징 검출 
+## 특징 검출
 #### 점(코너) 기반 접근
 
 1) Moravec\`s Corner Detector -> 1977년 : Moravec이 코너점 찾는방법을 시작(1977)
