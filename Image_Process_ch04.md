@@ -44,7 +44,7 @@ contours, hierarchy = cv2.findContours(threshold_image, cv2.RETR_TREE, cv2.CHAIN
     . cv2.RETR_LIST: contour 간 계층구조 상관관계를 고려하지 않고 contour를 추출
     . cv2.RETR_CCOMP: 이미지에서 모든 contour를 추출한 후, 2단계 contour 계층 구조로 구성함. 1단계 계층에서는 외곽 경계 부분을, 2단계 계층에서는 구멍(hole)의 경계 부분을 나타내는 contour로 구성됨
     . cv2.RETR_TREE: 이미지에서 모든 contour를 추출하고 Contour들간의 상관관계를 추출함
-    세 번째 인자로 찾은 컨투어를 저장할 때 방식을 준다.
+    세 번째 인자로 찾은 컨투어를 저장할 때 방식을 준다. http://sams.epaiai.com/220534805843
     .cv2.CHAIN_APPROX_NONE: contour를 구성하는 모든 점을 저장함.
     . cv2.CHAIN_APPROX_SIMPLE: contour의 수평, 수직, 대각선 방향의 점은 모두 버리고 끝 점만 남겨둠. 예를 들어 똑바로 세워진 직사각형의 경우, 4개 모서리점만 남기고 다 버림
     . cv2.CHAIN_APPROX_TC89__1: Teh-Chin 연결 근사 알고리즘(Teh-Chin chain approximation algorithm)을 적용함
@@ -67,7 +67,7 @@ cv2.drawContours(original_image, [contours[ci]], 0, (255, 0, 255), 3)
 
 ```
 
-### Contour활용 #1
+### Contour활용 #1 : 도형 정보 수집
 
 도형의 특징 정보 도출 : 이미지 모멘트 이용
     - 이미지 모멘트 : 객체의 무게중심, 객체의 면적 등과 같은 특성을 계산할 때 유용(`cv2.moments`)
@@ -97,7 +97,22 @@ Contour_Area =  mmt['m00'] # 또는 cv2.contourArea(contour)로도 구할수 있
 cv2.arcLength(contour, TRUE) # 2nd 인자에서 해당 Contour이 폐곡선(TRUE)인지 열린곡선(FALSE)인지 지정
 ```
 
-### Contour활용 #2 [[출처]](http://sams.epaiai.com/220517391218)
+> Orientation(방향) : Contour의 최적 타원의 기울어진 각도로 구합니다. `(x, y), (MajorAxis, MinorAxis), angle = cv2.fitEllipse(cnt)` [[참고]](https://blog.naver.com/samsjang/220517848698)
+
+
+### Contour활용 #2 :  Convex Hull [[출처]](http://sams.epaiai.com/220517391218)
+
+Contour의 오목한 부분(Convexity Defects)을 체크하고 이를 보정하는 역할을 수행합니다. 볼록 곡선은 오목한 부분이 전혀 없는 선
+
+
+```python
+cnt = contours[1] # contours[1]은 원본 이미지에서 찾은 contour들 가운데 2번째 contour입니다. 이녀석을 선택한 이유는 2번째 contour가 도형 바깥쪽을 감싸는 contour라서, 이미지에 따라 변함
+check = cv2.isContourConvex(cnt) #Contour가 Convex Hull 인지 체크 TRUE / FALSE
+hull = cv2.convexHull(cnt)
+cv2.drawContours(img1, [hull], 0, (0, 255, 0), 3)
+```
+
+![](https://i.imgur.com/TrGq5e6.png)
 
 ---
 
