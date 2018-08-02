@@ -1,4 +1,5 @@
 ## Chapter 7. Detecting and Recognizing Objects
+
 용어 정리 : Detecting Vs. Recognizing
 * Detecting an object is the ability of a program to determine if a certainregion of an image contains an unidentified object
 * Recognizing is the ability of aprogram to identify this object. Recognizing normally only occurs in areas of interestwhere an object has been detected, 

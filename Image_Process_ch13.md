@@ -1,4 +1,4 @@
-## Chapter 13. SRUF
+## Chapter 13. SURF
 
 SIFT[1]와 유사한 기술, 연산 속도 Up에 강점
 * 차이점 : 디스크립터 구조가 바뀜
