@@ -4,10 +4,10 @@
 
 ---
 
-* [Image\_Process\_ch01](Image_Process_ch01.md)
-* [Image\_Process\_ch02](Image_Process_ch02.md)
-* [Image\_Process\_ch03](Image_Process_ch03.md)
-* [Image\_Process\_ch04](Image_Process_ch04.md)
+* [Image\_Process\_ch01\_Image Heneration and Colors](Image_Process_ch01.md)
+* [Image\_Process\_ch02\_Image Transform](Image_Process_ch02.md)
+* [Image\_Process\_ch03\_Image Enhancement](Image_Process_ch03.md)
+* [Image\_Process\_ch04\_Edge Detection ](Image_Process_ch04.md)
 * [Image\_Process\_ch05\_Image Morphology](Image_Process_ch05.md)
 * [Image\_Process\_ch06](Image_Process_ch06.md)
 * [Image\_Process\_ch07](Image_Process_ch07.md)
