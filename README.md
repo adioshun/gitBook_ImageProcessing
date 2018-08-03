@@ -33,3 +33,6 @@ k-Nearest Neighbour(kNN)
 kNN을 이용한 숫자 인식
 Demo 준비1
 Demo 준비2
+
+
+[OpenCV-Python Tutorials](http://opencv-python-tutroals.readthedocs.io/en/latest/): 영문
