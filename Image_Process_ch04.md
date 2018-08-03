@@ -102,7 +102,15 @@ cv2.arcLength(contour, TRUE) # 2nd 인자에서 해당 Contour이 폐곡선(TRUE
 
 ### Contour활용 #2 :  Convex Hull [[출처]](http://sams.epaiai.com/220517391218)
 
-Contour의 오목한 부분(Convexity Defects)을 체크하고 이를 보정하는 역할을 수행합니다. 볼록 곡선은 오목한 부분이 전혀 없는 선
+Convex Hull = Convex Hull이란 contours point를 모두 포함하는 볼록한 외관선, 볼록 곡선은 오목한 부분이 전혀 없는 선
+
+아래 그림에서 붉은 선이 Convex Hull을 나타내고 화살표의 차이가 convexity defect라고 합니다.
+- convexity defect는 contours와 hull과의 최대차이를 나타냅니다.
+
+
+![](https://i.imgur.com/kqLqZIz.png)
+
+`convexHull(cnt)`는 Contour의 오목한 부분(Convexity Defects)을 체크하고 이를 보정하는 역할을 수행합니다.
 
 
 ```python
