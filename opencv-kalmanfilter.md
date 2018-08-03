@@ -53,3 +53,58 @@ measurement = np.dot(kalman.measurementMatrix, state) + measurement
 kalman.correct(measurement)
 
 ```
+
+---
+```python
+import cv2 as cv
+from math import cos, sin, sqrt
+import numpy as np
+
+img_height = 500
+img_width = 500
+
+def calc_point(angle):
+    return (np.around(img_width/2 + img_width/3*cos(angle), 0).astype(int),
+            np.around(img_height/2 - img_width/3*sin(angle), 1).astype(int))
+
+
+
+kalman = cv.KalmanFilter(2, 1, 0)
+kalman.transitionMatrix = np.array([[1., 1.], [0., 1.]])
+kalman.measurementMatrix = 1. * np.ones((1, 2))
+kalman.processNoiseCov = 1e-5 * np.eye(2)
+kalman.measurementNoiseCov = 1e-1 * np.ones((1, 1))
+kalman.errorCovPost = 1. * np.ones((2, 2))
+kalman.statePost = 0.1 * np.random.randn(2, 1)
+
+
+
+  
+state = 0.1 * np.random.randn(2, 1)  
+state_angle = state[0, 0]
+state_pt = calc_point(state_angle)
+
+prediction = kalman.predict()
+
+predict_angle = prediction[0, 0]
+predict_pt = calc_point(predict_angle)
+
+measurement = kalman.measurementNoiseCov * np.random.randn(1, 1)
+
+# generate measurement
+measurement = np.dot(kalman.measurementMatrix, state) + measurement
+
+measurement_angle = measurement[0, 0]
+measurement_pt = calc_point(measurement_angle)
+
+
+print("state_pt : {}".format(state_pt))
+print("measurement_pt : {}".format(measurement_pt))
+print("predict_pt : {}".format(predict_pt))
+
+kalman.correct(measurement)
+
+process_noise = sqrt(kalman.processNoiseCov[0,0]) * np.random.randn(2, 1)
+state = np.dot(kalman.transitionMatrix, state) + process_noise
+```
+---
