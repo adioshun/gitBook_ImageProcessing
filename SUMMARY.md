@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [OpenCV\_BackgroundSubtractor](opencvbackgroundsubtractor.md)
 * [OpenCV-KalmanFilter](opencv-kalmanfilter.md)
+* [OpenCV-Tracking](opencv-tracking.md)
 
 ---
 
