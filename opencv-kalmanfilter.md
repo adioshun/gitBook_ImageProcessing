@@ -39,7 +39,7 @@ Parameters:
 prediction = kalman.predict()
 
 ```
-## Update
+## Update(=correct)
 
 ```python 
 cv.KalmanCorrect(kalman, measurement)
