@@ -16,6 +16,88 @@ OpenCV는 배경제거를 편리하게 해주는 3가지 알고리즘을 지원�
 
 - [추천] [A Review of Object Detection and Tracking Methods: ](https://www.researchgate.net/publication/322243836_A_Review_of_Object_Detection_and_Tracking_Methods): 5.3.1 background subtraction부분 참고 하기 (리뷰 논문)
 
+### 5.3.1 Background subtraction
+
+Background subtraction [1-3] requires regular updating of the **background model** to adapt to gradual or fast illumination changes and motion changes. 
+
+```
+[1] S. Kumar and J. S. Yadav, “Video Object Extraction and its Tracking using Background Subtraction in Complex Environments”, Perspectives in Science vol.8, 317-322, 2016.
+[2] S.H Shaikh, K. Saeed, N Chaki, “Chapter-2, Moving Object Detection Approaches, Challenges and Object Tracking”, Moving Object Detection using Background Subtraction, springerBriefs in Computer Science, , ISBN 978-3-319-07386-6, 2014.
+[3] O Barnich and M. V. Droogenbroeck,” ViBe: A Universal Background Subtraction Algorithm for Video Sequences”, IEEE Transactions on Image Processing, 20(6), 1709-1724, 2011.
+```
+
+
+In [52], important background models developed up to 2014 are discussed. 
+- 분류 기반 수학 모델 제안 `The authors presented a classification based on mathematical models.`
+
+```
+[52] T. Bouwmans, “Traditional and Recent Approaches In Back-Ground Modeling for Foreground Detection: An Overview” Computer Science Review, II-I2 31-66, 2014
+```
+
+
+
+An approach based on a self organizing method without any prior knowledge about the involved patterns is used
+to generate the background in [53]. 
+- The background model is updated by automatically learning background variations using a neural network. 
+
+```
+[53] L. Maddalena and A. Petrosino, A Self-Organizing Approach to Background Subtraction for Visual Surveillance Applications, IEEE Transactions on Image Processing, Vol. 17, No. 7, 2008.
+```
+
+
+To handle effectively both sudden and gradual background changes, in [54], authors used a learning based background subtraction approach. 
+- They formulated the background modeling step as a dictionary learning problem, and the foreground detection step as a modified sparse coding problem. 
+
+```
+[54] C. Zhao, X. Wang, W. Cham, „Background Subtraction via Robust Dictionary Learning”, EURASIP Journal on Image and Video Processing, 2011: 972961,2011
+```
+
+
+In [55], the background is modelled by **rectangular regions**, described by a **color histogram** and a **texture measure**. 
+- The current frame in which motion is to be detected is modelled in the same way as the background. 
+- The motion is detected by comparing the corresponding rectangular regions computed at the coarsest scale to the finest scale. 
+- The Guassian mixture method is finally applied at the finest scale.
+
+
+```
+[55] P.D Z. Varcheie, M. Sills-Lavoie G. Bilodeau, “A Multiscale Region-Based Motion Detection and Background Subtraction Algorithm”, Sensors, 10, 1041-1061, 2010.
+```
+
+
+대부분의 알고리즘은 모델링을 위한 초기 프레임을 활용 한다. `Most of the algorithms require a few initial frames to initialize the background. `
+
+
+A technique, called “ViBe” (for “VIsual Background Extractor”) presented in [13], requires only a **single frame** to initialize the background. 
+- This frees from the need to wait for several seconds to initialize the background model. 
+- The authors modelled each background pixel with a set of samples and the current value of a pixel is compared to its closest samples within the collection of samples. 
+- Since a background is non-static, the background model should be updated regularly. 
+- For updating, the authors selected a value to be replaced randomly, in contrast to other approaches, where the oldest value is replaced first.
+
+```
+[13] O. Barnich and M. V. Droogenbroeck, “ViBe: A Universal Background Subtraction Algorithm for Video Sequences”, IEEE Transactions on Image Processing, 1709-1724, 2011.
+```
+
+To adapt to sudden or gradual illumination changes, a **probabilistic background** model based on kernel density estimation is proposed in [56]. 
+- In this, the background is modelled as a probabilistic model. The kernel density estimation Guassian model is updated at every frame by controlling the learning rate according to the situation. 
+- The updating method automatically adapts to various environments and stochastically deletes non-background information or adds new-background values.
+
+```
+[56] J. Lee, M. Park, “An Adaptive Background Subtraction Method Based on Kernel Density Estimation”, 12, 12279-12300, Sensors 2012.
+```
+
+
+A background modeling and object extraction module to enhance object extraction process is proposed by Kumar et. al.[1]. 
+- The method uses a Kalman filter for tracking, and it consists of two stages. 
+    1. The first stage uses the background subtraction and temporal difference mechanism to derive an approximate motion field and calculates regional entropy to get the actual moving pixels that have low entropy. 
+    2. The second stage uses the Kalman filtering for object tracking. 
+- Their method is found to be effective to eliminate ghost and aperture distortion.
+
+
+
+```
+[1] S. Kumar and J. S. Yadav, “Video Object Extraction and its Tracking using Background Subtraction in Complex Environments”, Perspectives in Science vol.8, 317-322, 2016.
+```
+
 ---
 
 
