@@ -13,10 +13,7 @@ OpenCV는 배경제거를 편리하게 해주는 3가지 알고리즘을 지원�
 > [OpenCV-Python 강좌 49편 : 비디오 또는 동영상에서 배경 제거하기](http://sams.epaiai.com/220664036092)
 
 
-
-- [추천] [A Review of Object Detection and Tracking Methods: ](https://www.researchgate.net/publication/322243836_A_Review_of_Object_Detection_and_Tracking_Methods): 5.3.1 background subtraction부분 참고 하기 (리뷰 논문)
-
-### 5.3.1 Background subtraction
+### [5.3.1 Background subtraction](http://www.ijaerd.com/papers/finished_papers/A%20Review%20of%20Object%20Detection%20and%20Tracking%20Methods-IJAERDV04I1045913.pdf)
 
 Background subtraction [1-3] requires regular updating of the **background model** to adapt to gradual or fast illumination changes and motion changes. 
 
