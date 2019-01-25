@@ -10,7 +10,7 @@ OpenCV는 배경제거를 편리하게 해주는 3가지 알고리즘을 지원�
 - BackgroundSubtractorMOG2
 - BackgroudSubtractorGMG
 
-> [OpenCV-Python 강좌 49편 : 비디오 또는 동영상에서 배경 제거하기](http://sams.epaiai.com/220664036092)
+> [[추천]도서 및 링크 모음](https://sites.google.com/site/backgroundsubtraction/overview), [OpenCV-Python 강좌 49편 : 비디오 또는 동영상에서 배경 제거하기](http://sams.epaiai.com/220664036092)
 
 
 ### [5.3.1 Background subtraction](http://www.ijaerd.com/papers/finished_papers/A%20Review%20of%20Object%20Detection%20and%20Tracking%20Methods-IJAERDV04I1045913.pdf)
