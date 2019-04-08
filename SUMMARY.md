@@ -28,6 +28,7 @@
 * [ch14\_Image Mosaic\_panorama](Image_Process_ch14.md)
 * [ch15\_Stereo Camera System](Image_Process_ch15.md)
   * [Epipolar Geometry](Image_Process_ch15/epipolar-geometry.md)
+  * [Stereo matching](Image_Process_ch15/stereo-matching.md)
 * [ch16\_Bayesian inference and MRF models](Image_Process_ch16.md)
 * [ch17\_Shape Matching](Image_Process_ch17.md)
 * [ch18\_Object Tracking](Image_Process_ch18.md)
