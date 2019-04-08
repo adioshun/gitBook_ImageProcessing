@@ -32,7 +32,18 @@
 - 종류 : SAD(Sum of absolute difference), SSD(Sum of squared difference), NCC(normalized cross correlation), Census transform, Rank transform 등
 
 
-> 특징 기반(feature-based) 정합 방법도 있지만 최근에는 사용 하지 않음 
+> 지역 정합 방법은 영역 기반외 특징 기반(feature-based) 정합 방법도 있지만 최근에는 사용 하지 않음 
+
+#### A. SAD(Sum of absolute difference), SSD(Sum of squared difference)
+
+
+
+> [상세 내용](https://blog.naver.com/dldlsrb45/220879732646)
+
+#### B. Census transform, Rank transform
+
+> [상세 내용](https://blog.naver.com/dldlsrb45/220880488720)
+
 
 ### 3. 지역 정합 방법 통한 시차 계산 방법 (Depth map생성 방법) 
 
