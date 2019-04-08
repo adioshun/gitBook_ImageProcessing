@@ -1,7 +1,7 @@
 # Chapter 15. Stereo Camera System
 
 
->  시차 영상(disparity image)= 깊이 영상(depth map)
+>  시차 영상(disparity image)= 깊이 영상(depth map) = Dense Map(SLAM에서??)
 
 ## 1. Disparity Map 이란?
 
