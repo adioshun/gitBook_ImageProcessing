@@ -9,6 +9,7 @@
 
 * [ch01\_Image Heneration and Colors](Image_Process_ch01.md)
 * [ch02\_Image Transform](Image_Process_ch02.md)
+  * [Hough Transformation](Image_Process_ch02/hough-transformation.md)
 * [ch03\_Image Enhancement](Image_Process_ch03.md)
 * [ch04\_Edge\_Contour\_Detection ](Image_Process_ch04.md)
 * [ch05\_Image Morphology](Image_Process_ch05.md)
@@ -23,7 +24,7 @@
 * [ch14\_Image Mosaic\_panorama](Image_Process_ch14.md)
 * [ch15\_Stereo Camera System](Image_Process_ch15.md)
 * [ch16\_Bayesian inference and MRF models](Image_Process_ch16.md)
-* [Ich17\_Shape Matching](Image_Process_ch17.md)
+* [ch17\_Shape Matching](Image_Process_ch17.md)
 * [ch18\_Object Tracking](Image_Process_ch18.md)
 * [ch19\_Mean Shift](Image_Process_ch19.md)
 * [ch20\_K-means Clustering](Image_Process_ch20.md)
