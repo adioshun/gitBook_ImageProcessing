@@ -44,6 +44,10 @@
 
 > [상세 내용](https://blog.naver.com/dldlsrb45/220880488720)
 
+#### C. [제안 방법] Probabilistic Depth Sensor 
+
+> Facebook Slam KR - Stereo Matching : [[Youtube]](https://youtu.be/fAotZkqusCE?t=1842), [[ppt]](http://bitly.kr/mZNRD)
+
 
 ### 3. 지역 정합 방법 통한 시차 계산 방법 (Depth map생성 방법) 
 
