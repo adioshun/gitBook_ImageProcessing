@@ -10,7 +10,10 @@
 
 > 간단히 말해서 Pixel의 Disparity는 그 픽셀에 대한 최소 제곱 합들의 Shift value와 같다. 
 
-## 2. 절차 (Calculating Disparity Map)
+
+## 2. 스테레오 비전의 3차원 거리 정보 계산
+
+### 2.1 간단버젼 (Calculating Disparity Map)
 
 1. 이미지들은 SSD/SAD 윈도우 연산에 용이하게 하기 위해 zero pixels의 frame으로 채워진다. 
     - SSD : Sum of Squared Differences 
@@ -20,7 +23,17 @@
     - Disparity Map은 3차원 공간에서부터 줄어든 2차원 Map이다. 
     - Pixel의 차이는 픽셀의 SSD/SAD 최소 시프트 값과 동일하다. 
 
+### 2.2 기본 원리 
 
+|![](https://i.imgur.com/0O5syLj.png)|![](https://i.imgur.com/lLTBv5r.png)|
+|-|-|
+
+3차원 거리 정보는 시차, 초점 거리(focal length), 베이스라인(baseline), 3가지 요소(factor)를 통해 획득 가능
+- 시차(d:disparity): 위에서 언급했듯이, 좌/우 영상에서 동일하게 나타나는 물체에 대한 x축 위치 차이를 의미(아래 그림에서 'x' 를 의미)
+- 초점 거리(f): 이미지 평면(ex. CCD, CMOS 센서)와 카메라 렌즈와의 거리
+- 베이스라인(b): 좌/우 카메라의 간격
+
+> f,b는 물리적 요소로 고정 상수, 실제 필요 한건 d (Stereo matching과정을 통해 도출)
 
 ---
 
