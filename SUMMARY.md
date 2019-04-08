@@ -1,5 +1,7 @@
 # Summary
 
+## Image Processing
+
 * [Introduction](README.md)
 * [OpenCV\_BackgroundSubtractor](opencvbackgroundsubtractor.md)
 * [OpenCV-KalmanFilter](opencv-kalmanfilter.md)
@@ -27,6 +29,7 @@
 * [ch13\_SURF](Image_Process_ch13.md)
 * [ch14\_Image Mosaic\_panorama](Image_Process_ch14.md)
 * [ch15\_Stereo Camera System](Image_Process_ch15.md)
+  * [Epipolar Geometry](Image_Process_ch15/epipolar-geometry.md)
 * [ch16\_Bayesian inference and MRF models](Image_Process_ch16.md)
 * [ch17\_Shape Matching](Image_Process_ch17.md)
 * [ch18\_Object Tracking](Image_Process_ch18.md)
@@ -37,6 +40,15 @@
 * [ch23\_Boosting](Image_Process_ch23.md)
 
 ---
+
+## Geometry
+
+[README](geometry/README.md)
+[Intro](geometry/intro.md)
+[References](geometry/references.md)
+
+
+## Application 
 
 * [Chapter 1. Setting Up OpenCV](chapter-1-setting-up-opencv.md)
 * [Chapter 3. Processing Images with OpenCV 3](chapter-3-processing-images-with-opencv-3.md)
