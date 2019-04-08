@@ -33,22 +33,16 @@
 * [ch16\_Bayesian inference and MRF models](Image_Process_ch16.md)
 * [ch17\_Shape Matching](Image_Process_ch17.md)
 * [ch18\_Object Tracking](Image_Process_ch18.md)
+  * [opencv\_tracking](Image_Process_ch18/opencvtracking.md)
 * [ch19\_Mean Shift](Image_Process_ch19.md)
 * [ch20\_K-means Clustering](Image_Process_ch20.md)
 * [ch21\_Image Retrieval](Image_Process_ch21.md)
 * [ch22\_keypoint recognition Using Randomized Tree](Image_Process_ch22.md)
 * [ch23\_Boosting](Image_Process_ch23.md)
 
----
-
 ## Geometry
 
-[README](geometry/README.md)
-[Intro](geometry/intro.md)
-[References](geometry/references.md)
-
-
-## Application 
+## Application
 
 * [Chapter 1. Setting Up OpenCV](chapter-1-setting-up-opencv.md)
 * [Chapter 3. Processing Images with OpenCV 3](chapter-3-processing-images-with-opencv-3.md)
