@@ -34,6 +34,7 @@
 * [ch17\_Shape Matching](Image_Process_ch17.md)
 * [ch18\_Object Tracking](Image_Process_ch18.md)
   * [opencv\_tracking](Image_Process_ch18/opencvtracking.md)
+  * [opencv\_kalmanfilter](Image_Process_ch18/opencvkalmanfilter.md)
 * [ch19\_Mean Shift](Image_Process_ch19.md)
 * [ch20\_K-means Clustering](Image_Process_ch20.md)
 * [ch21\_Image Retrieval](Image_Process_ch21.md)
