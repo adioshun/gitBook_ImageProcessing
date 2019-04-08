@@ -21,6 +21,7 @@
 * [ch09\_Geometric Camera Models](Image_Process_ch09.md)
 * [ch10\_Camera Calibration](Image_Process_ch10.md)
   * [3D Pose Estimation](Image_Process_ch10/3d-pose-estimation.md)
+  * [Extrinsic Camera Calibration](Image_Process_ch10/extrinsic-camera-calibration.md)
 * [ch11\_Image Warping](Image_Process_ch11.md)
 * [ch12\_SIFT](Image_Process_ch12.md)
 * [ch13\_SURF](Image_Process_ch13.md)
