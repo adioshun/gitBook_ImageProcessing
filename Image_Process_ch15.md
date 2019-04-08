@@ -56,6 +56,7 @@
 [참고자료]
 - [OpenCV Manual](https://docs.opencv.org/3.1.0/dd/d53/tutorial_py_depthmap.html)
 - [[Stereo Vision] Disparity Map 생성](https://eehoeskrap.tistory.com/103)
+- [스테레오 비전(Stereo Vision)](https://blog.naver.com/dldlsrb45/220878488912): AnyTime2736
 
 
 
