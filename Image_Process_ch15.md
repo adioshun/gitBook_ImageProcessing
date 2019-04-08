@@ -1,6 +1,8 @@
 # Chapter 15. Stereo Camera System
 
 
+>  시차 영상(disparity image)= 깊이 영상(depth map)
+
 ## 1. Disparity Map 이란?
 
 - Disparity는 Stereo 정합을 위한 두 이미지에서의 객체의 위치 상의 다른 차이
