@@ -4,6 +4,7 @@
 
 * [Introduction](README.md)
 * [OpenCV\_BackgroundSubtractor](opencvbackgroundsubtractor.md)
+* [Intro\_BackgroundSubtractor](introbackgroundsubtractor.md)
 * [References](references.md)
 
 ---
